@@ -9,78 +9,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="floating-wa">
-    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20have%20a%20question%20about%20your%20services" aria-label="Chat on WhatsApp">🌙</a>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <nav class="nav">
-      <div class="logo-lockup">
-        <img src="logo.png" alt="Tarot by Luv logo" class="logo-img" />
-      </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="book.html">Book</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <a href="book.html" class="nav-cta">Book a Reading</a>
-    </nav>
-  </header>
-
-  <main class="wrapper">
-    <section id="services-page">
-      <div class="section-header">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-sub">
-          Choose the work you need. Each service can be booked in various durations to
-          suit your depth and focus.
-        </p>
-      </div>
-      <div class="services-grid">
-        <!-- Tarot Reading -->
-        <div class="service-card">
-          <img src="icon2.png" alt="Tarot icon" style="height:34px; width:34px;" />
-          <div class="service-title">Tarot Reading</div>
-          <div class="service-text">
-            Focused or full spread readings aimed at clarity around decisions, shifts or
-            timelines.
-          </div>
-          <a href="book.html" class="service-link">Book Now</a>
-        </div>
-        <!-- Relationship Healing -->
-        <div class="service-card">
-          <img src="icon3.png" alt="Relationship icon" style="height:34px; width:34px;" />
-          <div class="service-title">Relationship Healing</div>
-          <div class="service-text">
-            Heal patterns, improve communication and bring balance to your connections.
-          </div>
-          <a href="book.html" class="service-link">Book Now</a>
-        </div>
-        <!-- Astrology Reading -->
-        <div class="service-card">
-          <img src="icon5.png" alt="Astrology icon" style="height:34px; width:34px;" />
-          <div class="service-title">Astrology Reading</div>
-          <div class="service-text">
-            Dive into your birth chart or compatibility. Understand cycles, purpose and
-            timing.
-          </div>
-          <a href="book.html" class="service-link">Book Now</a>
-        </div>
-        <!-- Energy Balancing -->
-        <div class="service-card">
-          <img src="icon9.png" alt="Energy icon" style="height:34px; width:34px;" />
-          <div class="service-title">Energy Balancing</div>
-          <div class="service-text">
-            Chakra and aura alignment to release blocks, reset emotional flow and uplift
-            well‑being.
-          </div>
-          <a href="book.html" class="service-link">Book Now</a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="main.js"></script>
 </body>
 </html>
