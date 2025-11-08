@@ -78,13 +78,11 @@
             </div>
           ))}
         </div>
-        {/* Show controls only if there are more testimonials than the number visible */}
-        {total > visibleCount && (
-          <div className="carousel-controls">
-            <button onClick={prev} aria-label="Previous">‹</button>
-            <button onClick={next} aria-label="Next">›</button>
-          </div>
-        )}
+        {/* Always show navigation controls so users can cycle even when there are exactly three testimonials */}
+        <div className="carousel-controls">
+          <button onClick={prev} aria-label="Previous">&lt;</button>
+          <button onClick={next} aria-label="Next">&gt;</button>
+        </div>
       </>
     );
   }
