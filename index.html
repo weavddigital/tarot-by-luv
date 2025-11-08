@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarot by Luv | Tarot and Astrology Readings by Luv Kohli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tarot by Luv offers premium tarot readings, relationship healing, astrology guidance, and spiritual sessions by Luv Kohli. Book online with a refined, trusted experience." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-main: #050608;
+      --bg-soft: #0e0f13;
+      --gold: #d4af37;
+      --gold-soft: rgba(212, 175, 55, 0.16);
+      --ivory: #f5f3ef;
+      --text-main: #f7f7f7;
+      --muted: #b5b5b5;
+      --font-heading: "Playfair Display", serif;
+      --font-body: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius-xl: 18px;
+      --transition-fast: 0.25s ease;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.7);
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: radial-gradient(circle at top, #15151c 0, var(--bg-main) 40%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(16px);
+      background: radial-gradient(circle at top, rgba(212, 175, 55, 0.04), rgba(5, 6, 8, 0.96));
+      border-bottom: 1px solid rgba(212, 175, 55, 0.16);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo-lockup {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 30px;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-icon span {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      border-color: var(--gold) transparent transparent transparent;
+      transform: translateY(2px) rotate(-30deg);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .logo-text strong {
+      font-size: 16px;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      transition: all var(--transition-fast);
+      background: transparent;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: #050608;
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 70px 0 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.9fr) minmax(260px, 1.1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 42px;
+      font-weight: 500;
+      color: var(--ivory);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 480px;
+      margin-bottom: 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .btn-primary {
+      padding: 11px 26px;
+      border-radius: 999px;
+      border: none;
+      background: var(--gold);
+      color: #050608;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.9);
+    }
+
+    .btn-ghost {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid var(--gold-soft);
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-ghost span.icon {
+      font-size: 14px;
+      color: var(--gold);
+    }
+
+    .btn-ghost:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, rgba(212, 175, 55, 0.08), var(--bg-soft));
+      border-radius: var(--radius-xl);
+      padding: 22px 18px 18px;
+      border: 1px solid var(--gold-soft);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-card-label {
+      font-size: 10px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .hero-card h3 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--ivory);
+    }
+
+    .hero-card p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-card-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-soft), transparent);
+      margin: 4px 0;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-card-list li::before {
+      content: "✦";
+      margin-right: 6px;
+      color: var(--gold);
+      font-size: 8px;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 40px 0 20px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ivory);
+    }
+
+    .section-sub {
+      font-size: 12px;
+      color: var(--muted);
+      max-width: 380px;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(220px, 1.2fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .about-highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .about-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--gold-soft);
+      padding: 16px 14px;
+      background: rgba(4, 4, 6, 0.98);
+      display: grid;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--muted);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-card-label {
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* Services */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      padding: 16px 14px 14px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--gold-soft);
+      background: var(--bg-soft);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .service-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: var(--gold);
+    }
+
+    .service-title {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      color: var(--ivory);
+    }
+
+    .service-text {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .service-link {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--gold);
+      letter-spacing: 0.16em;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Testimonials */
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .testimonial-card {
+      padding: 16px 14px 14px;
+      border-radius: var(--radius-xl);
+      background: #08090d;
+      border: 1px solid var(--gold-soft);
+      font-size: 11px;
+      color: var(--muted);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .testimonial-name {
+      margin-top: 8px;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* Booking */
+
+    .booking-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1.3fr);
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .booking-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      color: var(--muted);
+      background: #06070a;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .booking-table thead {
+      background: rgba(212, 175, 55, 0.08);
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 9px;
+    }
+
+    .booking-table th,
+    .booking-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+    }
+
+    .booking-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .booking-tier-title {
+      font-weight: 500;
+      color: var(--ivory);
+      font-size: 12px;
+    }
+
+    .booking-price {
+      color: var(--gold);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .booking-cta-link {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all var(--transition-fast);
+    }
+
+    .booking-cta-link:hover {
+      background: var(--gold);
+      color: #050608;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .booking-side {
+      padding: 16px 14px;
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top, rgba(212, 175, 55, 0.12), #050608);
+      border: 1px solid var(--gold-soft);
+      box-shadow: var(--shadow-soft);
+      font-size: 11px;
+      color: var(--muted);
+      display: grid;
+      gap: 10px;
+    }
+
+    .booking-side strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .whatsapp-button {
+      margin-top: 2px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      transition: all var(--transition-fast);
+    }
+
+    .whatsapp-button span {
+      font-size: 15px;
+    }
+
+    .whatsapp-button:hover {
+      background: var(--gold);
+      color: #050608;
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1.4fr);
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 10px;
+      padding: 16px 14px 14px;
+      background: #050608;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--gold-soft);
+      box-shadow: var(--shadow-soft);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .contact-label {
+      font-size: 10px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .contact-input,
+    .contact-textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      background: #07080c;
+      color: var(--text-main);
+      font-size: 11px;
+      outline: none;
+      transition: all var(--transition-fast);
+    }
+
+    .contact-input:focus,
+    .contact-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .contact-note {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .contact-side {
+      font-size: 11px;
+      color: var(--muted);
+      display: grid;
+      gap: 6px;
+    }
+
+    .contact-side strong {
+      color: var(--gold);
+    }
+
+    /* Floating WhatsApp */
+
+    .floating-wa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+    }
+
+    .floating-wa a {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #050608;
+      font-size: 24px;
+      box-shadow: var(--shadow-soft);
+      transition: all var(--transition-fast);
+    }
+
+    .floating-wa a:hover {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.96);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero,
+      .about-grid,
+      .services-grid,
+      .booking-wrap,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Floating WhatsApp (update number) -->
+  <div class="floating-wa">
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%27d%20like%20to%20book%20a%20reading%20with%20Luv" aria-label="Chat on WhatsApp">
+      🌙
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <nav class="nav">
+      <div class="logo-lockup">
+        <div class="logo-icon">
+          <span></span>
+        </div>
+        <div class="logo-text">
+          <span>TAROT BY</span>
+          <strong>LUV</strong>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#booking" class="nav-cta">Book a Reading</a>
+    </nav>
+  </header>
+
+  <main class="wrapper">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div>
+        <div class="eyebrow">Tarot and Astrology by Luv Kohli</div>
+        <h1>Find clarity in life’s unseen paths with Tarot by Luv.</h1>
+        <p>
+          Private tarot readings, relationship healing, and astrology guidance held in a calm,
+          confidential space designed to realign your energy and direction.
+        </p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn-primary">Book a Reading</a>
+          <a href="#services" class="btn-ghost">
+            <span class="icon">✦</span> View Services
+          </a>
+        </div>
+        <div class="hero-note">
+          Sessions available online worldwide. Limited daily bookings for deeper, focused work.
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-label">Featured Offering</div>
+        <h3>Signature Clarity Session</h3>
+        <p>
+          A guided tarot and energy reading for those at a crossroads in love, career, or self.
+        </p>
+        <div class="hero-card-divider"></div>
+        <ul class="hero-card-list">
+          <li>Intuitive spread tailored to your questions</li>
+          <li>Insight on patterns, blocks, and next steps</li>
+          <li>Offered as 60 or 120 minute sessions</li>
+        </ul>
+        <a href="#booking" class="booking-cta-link" style="margin-top:4px; justify-self:flex-start;">
+          Book now <span>↗</span>
+        </a>
+      </aside>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-header">
+        <h2 class="section-title">About Luv Kohli</h2>
+        <p class="section-sub">
+          Tarot by Luv is built on the belief that real guidance is calm, honest, and grounded.
+          Every session is private, precise, and centered around your emotional well being.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Luv Kohli is a dedicated tarot reader and intuitive guide, known for detailed spreads,
+            clear interpretation, and a direct yet compassionate approach.
+          </p>
+          <br />
+          <p>
+            Each reading focuses on <span class="about-highlight">clarity, alignment, and action</span>.
+            Whether it is relationships, career turning points, or spiritual blocks,
+            sessions are structured to move you from confusion to grounded next steps.
+          </p>
+          <br />
+          <p>
+            The experience is designed to feel less like prediction and more like a
+            deeper conversation with your own intuition.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-label">Session Essence</div>
+          <div>✦ Safe, confidential space for honest questions</div>
+          <div>✦ Structured layouts for love, career, and healing</div>
+          <div>✦ Focus on patterns, timing, and energy shifts</div>
+          <div>✦ Practical guidance you can act on immediately</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="section-header">
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub">
+          Clear offerings with simple flow. Choose the work you need, then book the time length
+          that matches the depth you are seeking.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🃏</div>
+          <div class="service-title">Tarot Reading</div>
+          <div class="service-text">
+            Focused or full spread readings aimed at clarity around decisions, shifts, or timelines.
+          </div>
+          <div class="service-link">Available in all durations</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">♥</div>
+          <div class="service-title">Relationship Healing</div>
+          <div class="service-text">
+            For love, connection, separation, or recurring patterns between partners.
+          </div>
+          <div class="service-link">Best in 60 to 120 minutes</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">☉</div>
+          <div class="service-title">Astrology Guidance</div>
+          <div class="service-text">
+            Birth chart or compatibility readings to understand cycles, purpose, and alignment.
+          </div>
+          <div class="service-link">60 and 120 minutes</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✧</div>
+          <div class="service-title">Energy Balancing</div>
+          <div class="service-text">
+            Chakra and aura focused guidance to release blocks and reset emotional energy.
+          </div>
+          <div class="service-link">120 and 180 minutes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="section-header">
+        <h2 class="section-title">Client Experiences</h2>
+        <p class="section-sub">
+          A selection of words from clients who came in heavy and left with clarity, reassurance,
+          and a clearer path forward.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          “I came in lost and anxious. Luv read the situation exactly as it was and
+          gave me direction that actually matched what unfolded.”
+          <div class="testimonial-name">Anjali S.</div>
+        </div>
+        <div class="testimonial-card">
+          “The relationship reading helped me stop repeating the same pattern.
+          It felt direct, honest, and still gentle.”
+          <div class="testimonial-name">Rahul M.</div>
+        </div>
+        <div class="testimonial-card">
+          “His blend of tarot and intuitive coaching was on point and practical.
+          I walked away with decisions, not confusion.”
+          <div class="testimonial-name">Sara K.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking">
+      <div class="section-header">
+        <h2 class="section-title">Book a Reading</h2>
+        <p class="section-sub">
+          Choose your session length. Booking is a simple two step flow:
+          select a slot in the calendar, then confirm and pay through WhatsApp.
+        </p>
+      </div>
+
+      <div class="booking-wrap">
+        <table class="booking-table">
+          <thead>
+            <tr>
+              <th>Session</th>
+              <th>Ideal for</th>
+              <th>Price (₹)</th>
+              <th>Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="booking-tier-title">30 Minutes</div>
+              </td>
+              <td>One question, quick clarity, focused spread.</td>
+              <td class="booking-price">1,500</td>
+              <td>
+                <a class="booking-cta-link"
+                   href="YOUR_30_MIN_GOOGLE_CALENDAR_LINK"
+                   target="_blank">
+                  Slot ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="booking-tier-title">60 Minutes</div>
+              </td>
+              <td>Deep dive into love, career, or a key turning point.</td>
+              <td class="booking-price">2,800</td>
+              <td>
+                <a class="booking-cta-link"
+                   href="YOUR_60_MIN_GOOGLE_CALENDAR_LINK"
+                   target="_blank">
+                  Slot ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="booking-tier-title">120 Minutes</div>
+              </td>
+              <td>Combined tarot and astrology reading with integration.</td>
+              <td class="booking-price">4,500</td>
+              <td>
+                <a class="booking-cta-link"
+                   href="YOUR_120_MIN_GOOGLE_CALENDAR_LINK"
+                   target="_blank">
+                  Slot ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="booking-tier-title">180 Minutes</div>
+              </td>
+              <td>Intensive spiritual and energy healing container.</td>
+              <td class="booking-price">6,500</td>
+              <td>
+                <a class="booking-cta-link"
+                   href="YOUR_180_MIN_GOOGLE_CALENDAR_LINK"
+                   target="_blank">
+                  Slot ↗
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="booking-side">
+          <div><strong>How it works</strong></div>
+          <div>1. Click your preferred duration and choose an available slot.</div>
+          <div>2. After booking, confirm your session and payment on WhatsApp.</div>
+          <div>3. Luv will share meeting details for your session (video or voice).</div>
+          <a class="whatsapp-button"
+             href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%27ve%20booked%20a%20session%20with%20Luv%20and%20would%20like%20to%20confirm%20payment."
+             target="_blank">
+            <span>✆</span> Confirm via WhatsApp
+          </a>
+          <div class="booking-note">
+            Limited reschedules. Please reach out at least 24 hours in advance for changes.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">
+          For questions, custom sessions, collaborations, or event bookings, reach out directly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="contact-form">
+          <div class="contact-label">Send a message</div>
+
+          <label>
+            Name
+            <input class="contact-input" type="text" name="name" placeholder="Your full name" />
+          </label>
+
+          <label>
+            Email
+            <input class="contact-input" type="email" name="email" placeholder="Your email" />
+          </label>
+
+          <label>
+            Message
+            <textarea class="contact-textarea" name="message" placeholder="Share your questions or preferred session type."></textarea>
+          </label>
+
+          <button type="submit" class="btn-primary" style="font-size:10px; width:max-content;">
+            Submit enquiry
+          </button>
+
+          <div class="contact-note">
+            This form can be connected to your chosen email service or CRM in your build.
+          </div>
+        </form>
+
+        <div class="contact-side">
+          <div><strong>Direct contact</strong></div>
+          <div>Email: contact@tarotbyluv.com (placeholder)</div>
+          <div>WhatsApp: +91 XXXXX XXXXX (placeholder)</div>
+          <div><strong>Location</strong></div>
+          <div>Based in Mumbai. Sessions available globally online by appointment.</div>
+          <div><strong>Good to know</strong></div>
+          <div>
+            Readings are for guidance and reflection and are not a substitute for medical, legal, or financial advice.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
