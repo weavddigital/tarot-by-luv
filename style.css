@@ -166,18 +166,21 @@ section {
 
 /* Hero */
 
+/*
+ * Hero section
+ * Use flex layout so the content is always centered horizontally and vertically within the section.
+ * The hero now takes up most of the first viewport and centres all child elements.
+ */
 .hero {
-  /* Expand the hero to occupy more vertical space and centre content */
+  /* Increase padding so there is breathing room above and below the hero content */
   padding: 120px 0 60px;
-  display: grid;
-  /* Single column for hero content */
-  grid-template-columns: 1fr;
-  gap: 40px;
+  /* Use flexbox rather than grid to centre the hero content */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  /* Centre items horizontally within the grid */
-  justify-items: center;
+  justify-content: center;
   text-align: center;
-  /* Set a minimum height so the hero fills most of the first viewport */
+  /* Ensure the hero fills most of the viewport height */
   min-height: 80vh;
 }
 
@@ -218,6 +221,8 @@ section {
   letter-spacing: 0.26em;
   text-transform: uppercase;
   margin-bottom: 10px;
+  /* Centre align the eyebrow text on the hero */
+  text-align: center;
 }
 
 .hero h1 {
