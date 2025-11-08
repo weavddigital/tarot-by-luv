@@ -128,20 +128,34 @@
    * the markup but navigation still uses normal links for better SEO and fallback.
    */
   function Header() {
+    // State to handle opening and closing of the mobile menu
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    // Close the menu when a link is clicked
+    const closeMenu = () => setMenuOpen(false);
+
     return (
       <header>
         <nav className="nav">
           <div className="logo-lockup">
             <img src="logo.png" alt="Tarot by Luv logo" className="logo-img" />
           </div>
-          <div className="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="book.html">Book</a>
-            <a href="contact.html">Contact</a>
+          {/* Navigation links. Apply the 'open' class when the mobile menu is active */}
+          <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+            <a href="index.html" onClick={closeMenu}>Home</a>
+            <a href="about.html" onClick={closeMenu}>About</a>
+            <a href="services.html" onClick={closeMenu}>Services</a>
+            <a href="book.html" onClick={closeMenu}>Book</a>
+            <a href="contact.html" onClick={closeMenu}>Contact</a>
           </div>
+          {/* Primary call-to-action button remains visible on larger screens */}
           <a href="book.html" className="nav-cta">Book a Reading</a>
+          {/* Hamburger icon for mobile view */}
+          <div className="burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </nav>
       </header>
     );
