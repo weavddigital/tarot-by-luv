@@ -135,7 +135,7 @@
                 confidential space designed to realign your energy and direction.
               </p>
               <div className="hero-actions">
-                <a href="book.html" className="btn-primary">Book a Reading</a>
+                <a href="YOUR_60_MIN_GOOGLE_CALENDAR_LINK" className="btn-primary" target="_blank" rel="noopener">Book a Reading</a>
                 <a href="services.html" className="btn-ghost">
                   <span className="icon">✦</span> View Services
                 </a>
@@ -157,9 +157,11 @@
                 <li>Offered as 60 or 120 minute sessions</li>
               </ul>
               <a
-                href="book.html"
+                href="YOUR_60_MIN_GOOGLE_CALENDAR_LINK"
                 className="booking-cta-link"
                 style={{ marginTop: '4px', justifySelf: 'flex-start' }}
+                target="_blank"
+                rel="noopener"
               >
                 Book now <span>↗</span>
               </a>
@@ -208,8 +210,7 @@
             <div className="section-header">
               <h2 className="section-title">Services</h2>
               <p className="section-sub">
-                Explore the work we offer. Choose the service you need and then pick a session
-                length on the booking page.
+                Discover the path to clarity through ancient wisdom and intuitive guidance. Choose the work you need and then pick a session length on the booking page.
               </p>
             </div>
             <div className="services-grid">
@@ -264,16 +265,13 @@
           {/* Call to Action */}
           <section id="cta">
             <div className="section-header">
-              <h2 className="section-title">Begin Your Journey</h2>
+              <h2 className="section-title">Your Journey to Clarity Begins Here</h2>
               <p className="section-sub">
-                Ready to discover what lies ahead? Choose your session and start your transformation today.
+                Take the first step toward understanding your path, healing your relationships, and discovering your true potential.
               </p>
             </div>
             <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-              <a href="book.html" className="btn-primary">Book Now</a>
-              <a href="services.html" className="btn-ghost">
-                <span className="icon">✦</span> Our Services
-              </a>
+              <a href="YOUR_60_MIN_GOOGLE_CALENDAR_LINK" className="btn-primary" target="_blank" rel="noopener">Book Your Reading Today</a>
             </div>
           </section>
         </main>
