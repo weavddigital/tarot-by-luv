@@ -69,21 +69,26 @@
     }
 
     return (
-      <>
-        <div className="testimonials-container">
+      <div className="client-testimonials-wrapper">
+        {/* Left navigation arrow */}
+        <button className="client-testimonials-arrow" onClick={prev} aria-label="Previous">&lt;</button>
+        <div className="client-testimonials-cards">
           {visible.map((item, idx) => (
-            <div className="testimonial" key={idx}>
-              {item.text}
-              <div className="testimonial-name">{item.name}</div>
+            <div className="client-testimonial-card" key={idx}>
+              <div className="client-testimonial-avatar">
+                <div className="client-testimonial-initials">{item.initials}</div>
+                <div>
+                  <div className="client-testimonial-name">{item.name}</div>
+                  <div className="client-testimonial-location">{item.location}</div>
+                </div>
+              </div>
+              <div className="client-testimonial-text">&ldquo;{item.text}&rdquo;</div>
             </div>
           ))}
         </div>
-        {/* Always show navigation controls so users can cycle even when there are exactly three testimonials */}
-        <div className="carousel-controls">
-          <button onClick={prev} aria-label="Previous">&lt;</button>
-          <button onClick={next} aria-label="Next">&gt;</button>
-        </div>
-      </>
+        {/* Right navigation arrow */}
+        <button className="client-testimonials-arrow" onClick={next} aria-label="Next">&gt;</button>
+      </div>
     );
   }
 
@@ -94,19 +99,25 @@
   function HomePage() {
     const testimonials = [
       {
+        initials: 'AS',
+        name: 'Anjali S.',
+        location: 'Delhi',
         text:
-          'I came in lost and anxious. Luv read the situation exactly as it was and gave me direction that actually matched what unfolded.',
-        name: 'Anjali S.'
+          "Luv's reading was beyond accurate. I left with clarity and peace about my relationship decisions. His intuitive guidance helped me see patterns I'd been missing for years."
       },
       {
+        initials: 'KT',
+        name: 'Karan T.',
+        location: 'Mumbai',
         text:
-          'The relationship reading helped me stop repeating the same pattern. It felt direct, honest and still gentle.',
-        name: 'Rahul M.'
+          'The energy healing session helped me realign emotionally after a difficult period. Luv\'s gentle approach and deep understanding created a safe space for healing.'
       },
       {
+        initials: 'PR',
+        name: 'Priya R.',
+        location: 'Bangalore',
         text:
-          'His blend of tarot and intuitive coaching was on point and practical. I walked away with decisions, not confusion.',
-        name: 'Sara K.'
+          'My astrology reading with Luv was transformative. He explained my birth chart in ways that made complete sense and gave me practical guidance for my career path.'
       }
     ];
     return (
