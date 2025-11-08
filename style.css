@@ -482,6 +482,123 @@ section {
   box-shadow: var(--shadow-soft);
 }
 
+/* --- Client Testimonials New Design --- */
+
+/* Customize the testimonials section for a premium look similar to the provided example */
+#testimonials {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#testimonials .section-header {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#testimonials .section-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+#testimonials .section-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Wrapper to hold cards and navigation arrows */
+.client-testimonials-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Container for the testimonial cards */
+.client-testimonials-cards {
+  display: flex;
+  gap: 24px;
+}
+
+/* Individual testimonial card */
+.client-testimonial-card {
+  background: linear-gradient(135deg, #20124a 0%, #0a0812 100%);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 340px;
+  color: var(--text-main);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+/* Avatar wrapper */
+.client-testimonial-avatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Circle with initials */
+.client-testimonial-initials {
+  background: var(--gold);
+  color: var(--bg-main);
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+/* Name styling */
+.client-testimonial-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* Location styling */
+.client-testimonial-location {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Testimonial text styling */
+.client-testimonial-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Navigation arrows for testimonials */
+.client-testimonials-arrow {
+  background: #e0e0e0;
+  color: #1a1339;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  transition: all var(--transition-fast);
+}
+
+.client-testimonials-arrow:hover {
+  background: var(--gold);
+  color: #050608;
+  box-shadow: var(--shadow-soft);
+}
+
 /* Booking */
 
 .booking-wrap {
