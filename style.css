@@ -349,7 +349,8 @@ section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  /* Show three columns on desktop to accommodate nine categories */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -525,7 +526,8 @@ section {
 
 /* Individual testimonial card */
 .client-testimonial-card {
-  background: linear-gradient(135deg, #20124a 0%, #0a0812 100%);
+  /* Updated background to match overall site branding */
+  background: var(--bg-soft);
   border-radius: 16px;
   padding: 24px;
   width: 100%;
@@ -579,17 +581,18 @@ section {
 
 /* Navigation arrows for testimonials */
 .client-testimonials-arrow {
-  background: #e0e0e0;
-  color: #1a1339;
-  width: 40px;
-  height: 40px;
+  /* Style arrows to match site palette */
+  background: var(--bg-soft);
+  color: var(--gold);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: none;
+  border: 1px solid var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 20px;
   transition: all var(--transition-fast);
 }
 
@@ -836,5 +839,160 @@ section {
 
   .hero h1 {
     font-size: 32px;
+  }
+}
+
+/* ===============================
+   About Page Custom Styles
+   These styles emulate the layout seen on the reference site. They align sections to the center and provide consistent spacing.
+   =============================== */
+
+.about-hero {
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(180deg, rgba(14, 15, 19, 0.95) 0%, rgba(5, 6, 8, 0.95) 100%);
+}
+
+.about-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.about-intro-image img {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-intro-text h2 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.about-intro-text p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.about-journey {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about-journey h2 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.about-journey p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.about-approach {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about-approach h2 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.approach-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--gold-soft);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.approach-card h3 {
+  font-family: var(--font-heading);
+  color: var(--gold);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.approach-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.about-unique {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about-unique h2 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.about-unique blockquote {
+  font-style: italic;
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.about-unique p {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.about-unique a.btn-primary {
+  display: inline-block;
+  padding: 12px 26px;
+  font-size: 13px;
+}
+
+/* Responsive adjustments for about page */
+@media (max-width: 900px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
   }
 }
