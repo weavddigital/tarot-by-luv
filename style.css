@@ -45,7 +45,8 @@ img {
 .wrapper {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px 60px;
+/* Reduced bottom padding to avoid large empty space on shorter pages */
+  padding: 0 20px 40px;
 }
 
 header {
@@ -74,8 +75,9 @@ header {
 }
 
 /* Logo image */
+/* Larger logo for improved brand visibility */
 .logo-img {
-  height: 48px;
+  height: 80px;
   width: auto;
 }
 
@@ -132,8 +134,9 @@ header {
 
 /* Sections */
 
+/* Section spacing (reduced bottom padding to mitigate large empty spaces) */
 section {
-  padding: 40px 0 20px;
+  padding: 40px 0 30px;
 }
 
 .section-header {
@@ -391,8 +394,10 @@ section {
   margin: 0 auto;
 }
 
+/* Individual testimonial card */
 .testimonial {
-  display: none;
+  /* Always show testimonials in the grid layout; React controls which ones are visible */
+  display: block;
   padding: 16px;
   border-radius: var(--radius-xl);
   background: #08090d;
@@ -403,7 +408,7 @@ section {
 }
 
 .testimonial.active {
-  display: block;
+  /* Retained for backward compatibility; not used in React implementation */
 }
 
 .testimonial .testimonial-name {
@@ -435,6 +440,41 @@ section {
 }
 
 .carousel-buttons button:hover {
+  background: var(--gold);
+  color: #050608;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Updated carousel layout to display multiple testimonials at once */
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.carousel-controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.carousel-controls button {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.carousel-controls button:hover {
   background: var(--gold);
   color: #050608;
   box-shadow: var(--shadow-soft);
