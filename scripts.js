@@ -20,4 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     current = (current + 1) % testimonials.length;
     showTestimonial(current);
   });
+
+  // Automatically cycle through testimonials every 8 seconds
+  // This enhances the dynamic experience on the landing page by
+  // automatically advancing to the next testimonial without user input.
+  const autoInterval = setInterval(() => {
+    current = (current + 1) % testimonials.length;
+    showTestimonial(current);
+  }, 8000);
+
+  // Pause auto-advance when the user manually navigates the carousel
+  prevBtn?.addEventListener('click', () => {
+    clearInterval(autoInterval);
+  });
+  nextBtn?.addEventListener('click', () => {
+    clearInterval(autoInterval);
+  });
 });
