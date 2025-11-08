@@ -137,6 +137,13 @@
     return (
       <header>
         <nav className="nav">
+          {/* Render the hamburger first so it appears on the left on small screens */}
+          <div className="burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          {/* Logo comes after the burger so that it shifts to the right on mobile */}
           <div className="logo-lockup">
             <img src="logo.png" alt="Tarot by Luv logo" className="logo-img" />
           </div>
@@ -150,12 +157,6 @@
           </div>
           {/* Primary call-to-action button remains visible on larger screens */}
           <a href="book.html" className="nav-cta">Book a Reading</a>
-          {/* Hamburger icon for mobile view */}
-          <div className="burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
         </nav>
       </header>
     );
