@@ -356,6 +356,38 @@ section {
     display: flex;
   }
 
+  /* Push the logo lockup to the right on small screens so the burger stays left */
+  .logo-lockup {
+    margin-left: auto;
+  }
+
+  /* Stack hero action buttons vertically and center them */
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Make primary buttons full width on mobile */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ensure the contact form submit button spans the full width on mobile */
+  .contact-form .btn-primary {
+    width: 100%;
+  }
+
+  /* Remove excessive margins on about page cards and text */
+  .about-grid {
+    gap: 16px;
+    margin: 0;
+  }
+  .about-card {
+    margin-top: 12px;
+  }
+
   /* Show services in a single column on small screens for better readability */
   .services-grid {
     grid-template-columns: 1fr;
