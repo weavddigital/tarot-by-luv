@@ -167,11 +167,37 @@ section {
 /* Hero */
 
 .hero {
-  padding: 70px 0 40px;
+  /* Expand the hero to occupy more vertical space and centre content */
+  padding: 120px 0 60px;
   display: grid;
-  grid-template-columns: minmax(0, 1.9fr) minmax(260px, 1.1fr);
+  /* Single column for hero content */
+  grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
+  /* Centre items horizontally within the grid */
+  justify-items: center;
+  text-align: center;
+  /* Set a minimum height so the hero fills most of the first viewport */
+  min-height: 80vh;
+}
+
+/* CTA buttons wrapper to centre align the call-to-action on the home page */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Fade-in animation used on each page load */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .eyebrow {
