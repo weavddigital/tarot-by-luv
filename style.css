@@ -28,6 +28,9 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+
+  /* Prevent horizontal overflow on mobile devices */
+  overflow-x: hidden;
 }
 
 a {
@@ -332,13 +335,16 @@ section {
     flex-direction: column;
     position: absolute;
     top: 64px; /* approximate header height */
-    right: 20px;
+    left: 20px;
+    right: auto;
     background: #050608;
     padding: 20px;
     border: 1px solid var(--gold-soft);
     border-radius: 8px;
     box-shadow: var(--shadow-soft);
     z-index: 50;
+    /* Ensure the mobile menu never causes horizontal overflow */
+    max-width: calc(100% - 40px);
   }
 
   /* Show the menu when open */
@@ -383,9 +389,15 @@ section {
   .about-grid {
     gap: 16px;
     margin: 0;
+    grid-template-columns: 1fr;
+  }
+  .about-text {
+    text-align: center;
   }
   .about-card {
     margin-top: 12px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* Show services in a single column on small screens for better readability */
