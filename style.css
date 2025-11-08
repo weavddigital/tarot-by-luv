@@ -763,6 +763,23 @@ section {
   box-shadow: var(--shadow-soft);
 }
 
+/* Responsive layout for testimonials on mobile */
+@media (max-width: 900px) {
+  /* Stack the testimonials vertically and hide arrows */
+  .client-testimonials-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .client-testimonials-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .client-testimonials-arrow {
+    display: none;
+  }
+}
+
 /* Booking */
 
 .booking-wrap {
