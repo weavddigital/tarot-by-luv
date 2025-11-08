@@ -4,6 +4,108 @@
 
 (() => {
   const { useState, useEffect } = React;
+  /**
+   * Shared data across pages.
+   * Services list used on home and services pages to display offerings.
+   */
+  const servicesList = [
+    {
+      icon: 'icon2.png',
+      title: 'Tarot Reading',
+      text: 'Intuitive insight into your present and future energies through ancient card wisdom.'
+    },
+    {
+      icon: 'icon3.png',
+      title: 'Marriage & Relationships',
+      text: 'Find clarity in love, marriage prospects and relationship dynamics.'
+    },
+    {
+      icon: 'icon5.png',
+      title: 'Wealth & Abundance',
+      text: 'Unlock financial prosperity and attract abundance into your life.'
+    },
+    {
+      icon: 'icon6.png',
+      title: 'Black Magic Removal',
+      text: 'Protection and removal of negative energies and dark influences.'
+    },
+    {
+      icon: 'icon8.png',
+      title: 'Career & Business',
+      text: 'Navigate career paths and business decisions with cosmic guidance.'
+    },
+    {
+      icon: 'icon9.png',
+      title: 'Health & Wellness',
+      text: 'Holistic healing and wellness guidance for mind, body and spirit.'
+    },
+    {
+      icon: 'icon4.png',
+      title: 'Family & Children',
+      text: 'Harmonize family relationships and understand children’s life paths.'
+    },
+    {
+      icon: 'icon7.png',
+      title: 'Spiritual Healing',
+      text: 'Energy clearing, chakra balancing and spiritual awakening.'
+    },
+    {
+      icon: 'icon1.png',
+      title: 'Astrology Reading',
+      text: 'Personalized life path analysis through your birth chart.'
+    }
+  ];
+
+  /**
+   * Data for the About page.
+   */
+  const aboutJourneyText =
+    'His connection to the spiritual realm began in childhood, but it was during a challenging period in his early twenties that he discovered tarot as a tool for guidance and self‑reflection. What started as personal exploration evolved into a calling to help others navigate their own journeys.';
+
+  const aboutApproach = [
+    {
+      title: 'Intuitive Guidance',
+      text:
+        'He believes that everyone has the answers within them – his role is to help you access that inner wisdom through the symbolic language of tarot and the cosmic patterns revealed in astrology.'
+    },
+    {
+      title: 'Healing Focus',
+      text:
+        'Every session is designed to promote healing and growth. Whether you’re seeking clarity about relationships, career or personal development, the goal is always to leave you feeling empowered and aligned.'
+    },
+    {
+      title: 'Practical Wisdom',
+      text:
+        'While he works with mystical tools, the guidance he provides is practical and actionable. Clients leave with clear insights they can apply to their daily lives and decisions.'
+    },
+    {
+      title: 'Sacred Space',
+      text:
+        'He creates a safe, non‑judgemental environment where you can explore your deepest questions and concerns. Every reading is confidential and conducted with the utmost respect for your journey.'
+    }
+  ];
+
+  /**
+   * Timeline data for the About page.
+   * Each entry outlines a milestone in Luv's professional journey.
+   */
+  const aboutTimeline = [
+    {
+      year: '2010',
+      title: 'Discovered Tarot',
+      text: 'Began exploring tarot and occult sciences as a personal practice.'
+    },
+    {
+      year: '2015',
+      title: 'Professional Reader',
+      text: 'Started offering readings professionally and guiding clients.'
+    },
+    {
+      year: '2021',
+      title: 'Founded Tarot by Luv',
+      text: 'Established Tarot by Luv to offer readings and healing globally.'
+    }
+  ];
 
   /**
    * Floating WhatsApp button component.
@@ -208,45 +310,20 @@
           {/* Services Preview */}
           <section id="services-preview">
             <div className="section-header">
-              <h2 className="section-title">Services</h2>
+              <h2 className="section-title">Services Offered</h2>
               <p className="section-sub">
                 Discover the path to clarity through ancient wisdom and intuitive guidance. Choose the work you need and then pick a session length on the booking page.
               </p>
             </div>
             <div className="services-grid">
-              <div className="service-card">
-                <img src="icon2.png" alt="Tarot icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Tarot Reading</div>
-                <div className="service-text">
-                  Focused or full spread readings aimed at clarity around decisions, shifts or
-                  timelines.
+              {servicesList.map((service, idx) => (
+                <div className="service-card" key={idx}>
+                  <img src={service.icon} alt={`${service.title} icon`} style={{ height: '34px', width: '34px' }} />
+                  <div className="service-title">{service.title}</div>
+                  <div className="service-text">{service.text}</div>
+                  <a href="services.html" className="service-link">Learn More →</a>
                 </div>
-                <a href="services.html" className="service-link">Learn More</a>
-              </div>
-              <div className="service-card">
-                <img src="icon3.png" alt="Relationship icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Relationship Healing</div>
-                <div className="service-text">
-                  For love, connection, separation or recurring patterns between partners.
-                </div>
-                <a href="services.html" className="service-link">Learn More</a>
-              </div>
-              <div className="service-card">
-                <img src="icon5.png" alt="Astrology icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Astrology Reading</div>
-                <div className="service-text">
-                  Birth chart or compatibility readings to understand cycles, purpose and alignment.
-                </div>
-                <a href="services.html" className="service-link">Learn More</a>
-              </div>
-              <div className="service-card">
-                <img src="icon9.png" alt="Energy icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Energy Balancing</div>
-                <div className="service-text">
-                  Chakra and aura work to release blocks and reset emotional energy.
-                </div>
-                <a href="services.html" className="service-link">Learn More</a>
-              </div>
+              ))}
             </div>
           </section>
 
@@ -288,36 +365,67 @@
         <FloatingWA message="Hi I would like to learn more about your services" />
         <Header />
         <main className="wrapper">
-          <section id="about-page">
-            <div className="section-header">
-              <h2 className="section-title">About Luv Kohli</h2>
-              <p className="section-sub">
-                Learn more about the journey and philosophy of Luv Kohli – the intuitive guide behind Tarot by Luv.
+          {/* Hero section for the about page */}
+          <section className="about-hero">
+            <h1>About Luv Kohli</h1>
+            <p>Guiding souls toward clarity and healing through ancient wisdom</p>
+          </section>
+          {/* Intro section with image and text */}
+          <section className="about-intro">
+            <div className="about-intro-image">
+              {/* You can replace logo.png with a portrait or illustration for Luv */}
+              <img src="logo.png" alt="Luv Kohli" style={{ width: '100%', borderRadius: '12px' }} />
+            </div>
+            <div className="about-intro-text">
+              <h2>Who He Is</h2>
+              <p>
+                Luv Kohli is a dedicated tarot reader and intuitive healer with over a decade of experience.  What began as a personal search for clarity evolved into a passion to guide others on their own paths. Through tarot, astrology and energy work, he has helped countless clients find direction and peace.
+              </p>
+              <p>
+                His compassionate yet direct approach ensures each session provides practical insight while honouring your free will.  Outside of readings, he continues to deepen his knowledge of spirituality, psychology and mindfulness to better serve those who seek guidance.
               </p>
             </div>
-            <div className="about-grid">
-              <div className="about-text">
-                <p>
-                  Luv Kohli began his spiritual journey over a decade ago when he discovered the profound guidance of tarot and astrology.
-                  Through years of study and practice, he developed a unique approach that blends traditional wisdom with intuitive counselling.
-                </p>
-                <br />
-                <p>
-                  His sessions are gentle yet direct, offering clarity and practical steps. Whether you're navigating relationships, career changes or personal growth, Luv's aim is to guide you towards your own inner alignment.
-                </p>
-                <br />
-                <p>
-                  Outside of readings, he continues to deepen his knowledge of energy work, spiritual psychology and mindfulness practices to better serve his clients.
-                </p>
-              </div>
-              <div className="about-card">
-                <div className="about-card-label">Guidance Philosophy</div>
-                <div>✦ Empower clients to trust their inner knowing</div>
-                <div>✦ Use tarot and astrology as mirrors, not prescriptions</div>
-                <div>✦ Honour free will and personal responsibility</div>
-                <div>✦ Create a safe, non‑judgemental space for all questions</div>
-              </div>
+          </section>
+          {/* Journey section */}
+          <section className="about-journey">
+            <h2>His Journey into the Mystical</h2>
+            <p>{aboutJourneyText}</p>
+          </section>
+
+          {/* Professional journey timeline */}
+          <section className="about-timeline-section">
+            <h2>His Professional Journey</h2>
+            <div className="about-timeline">
+              {aboutTimeline.map((item, idx) => (
+                <div className="about-timeline-item" key={idx}>
+                  <h3>{item.year} – {item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
             </div>
+          </section>
+          {/* Approach section with cards */}
+          <section className="about-approach">
+            <h2>His Approach</h2>
+            <div className="approach-grid">
+              {aboutApproach.map((item, idx) => (
+                <div className="approach-card" key={idx}>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+          {/* Unique section with quote and CTA */}
+          <section className="about-unique">
+            <h2>What Makes His Practice Unique</h2>
+            <p>
+              Luv’s practice stands apart because he combines mystical insight with actionable guidance.  Each session is a sacred space designed to empower you on your journey.
+            </p>
+            <p>
+              Ready to experience his unique approach?  Discover which service resonates with you.
+            </p>
+            <a href="services.html" className="btn-primary" style={{ marginTop: '16px' }}>Explore Services</a>
           </section>
         </main>
       </>
@@ -334,49 +442,21 @@
         <Header />
         <main className="wrapper">
           <section id="services-page">
-            <div className="section-header">
-              <h2 className="section-title">Our Services</h2>
-              <p className="section-sub">
-                Choose the work you need. Each service can be booked in various durations to suit your depth and focus.
-              </p>
-            </div>
+          <div className="section-header">
+            <h2 className="section-title">Services Offered</h2>
+            <p className="section-sub">
+              Discover the path to clarity through ancient wisdom and intuitive guidance. Choose the work you need and then pick a session length on the booking page.
+            </p>
+          </div>
             <div className="services-grid">
-              {/* Tarot Reading */}
-              <div className="service-card">
-                <img src="icon2.png" alt="Tarot icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Tarot Reading</div>
-                <div className="service-text">
-                  Focused or full spread readings aimed at clarity around decisions, shifts or timelines.
+              {servicesList.map((service, idx) => (
+                <div className="service-card" key={idx}>
+                  <img src={service.icon} alt={`${service.title} icon`} style={{ height: '34px', width: '34px' }} />
+                  <div className="service-title">{service.title}</div>
+                  <div className="service-text">{service.text}</div>
+                  <a href="book.html" className="service-link">Book Now</a>
                 </div>
-                <a href="book.html" className="service-link">Book Now</a>
-              </div>
-              {/* Relationship Healing */}
-              <div className="service-card">
-                <img src="icon3.png" alt="Relationship icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Relationship Healing</div>
-                <div className="service-text">
-                  Heal patterns, improve communication and bring balance to your connections.
-                </div>
-                <a href="book.html" className="service-link">Book Now</a>
-              </div>
-              {/* Astrology Reading */}
-              <div className="service-card">
-                <img src="icon5.png" alt="Astrology icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Astrology Reading</div>
-                <div className="service-text">
-                  Dive into your birth chart or compatibility. Understand cycles, purpose and timing.
-                </div>
-                <a href="book.html" className="service-link">Book Now</a>
-              </div>
-              {/* Energy Balancing */}
-              <div className="service-card">
-                <img src="icon9.png" alt="Energy icon" style={{ height: '34px', width: '34px' }} />
-                <div className="service-title">Energy Balancing</div>
-                <div className="service-text">
-                  Chakra and aura alignment to release blocks, reset emotional flow and uplift well‑being.
-                </div>
-                <a href="book.html" className="service-link">Book Now</a>
-              </div>
+              ))}
             </div>
           </section>
         </main>
