@@ -199,6 +199,7 @@
    * Includes hero section, about preview, services preview, testimonials and CTA.
    */
   function HomePage() {
+    // A larger pool of testimonials (7 entries) to enable scrolling through multiple slides
     const testimonials = [
       {
         initials: 'AS',
@@ -212,7 +213,7 @@
         name: 'Karan T.',
         location: 'Mumbai',
         text:
-          'The energy healing session helped me realign emotionally after a difficult period. Luv\'s gentle approach and deep understanding created a safe space for healing.'
+          "The energy healing session helped me realign emotionally after a difficult period. Luv's gentle approach and deep understanding created a safe space for healing."
       },
       {
         initials: 'PR',
@@ -220,6 +221,34 @@
         location: 'Bangalore',
         text:
           'My astrology reading with Luv was transformative. He explained my birth chart in ways that made complete sense and gave me practical guidance for my career path.'
+      },
+      {
+        initials: 'SJ',
+        name: 'Shreya J.',
+        location: 'Hyderabad',
+        text:
+          'I came in feeling uncertain about my future. The tarot session uncovered deep insights and left me feeling hopeful and empowered.'
+      },
+      {
+        initials: 'RG',
+        name: 'Rahul G.',
+        location: 'Pune',
+        text:
+          'Luv\'s guidance helped me navigate a major career decision. His reading provided clarity and the confidence to move forward.'
+      },
+      {
+        initials: 'AM',
+        name: 'Anand M.',
+        location: 'Chennai',
+        text:
+          'The chakra balancing session was deeply restorative. I felt lighter and more centred immediately after.'
+      },
+      {
+        initials: 'NP',
+        name: 'Nikita P.',
+        location: 'Kolkata',
+        text:
+          'Luv combines empathy with practical advice. My reading offered both spiritual insight and actionable steps.'
       }
     ];
     return (
