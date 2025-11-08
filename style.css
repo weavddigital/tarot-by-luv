@@ -527,10 +527,12 @@ section {
 }
 
 /* Individual testimonial card */
+/* Individual testimonial card */
 .client-testimonial-card {
-  /* Updated background to match overall site branding */
-  /* Use a subtle radial gradient with gold tint to harmonise with the hero and card sections */
-  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.08), var(--bg-soft));
+  /* Updated background to harmonise with the site’s dark luxury palette */
+  /* A linear gradient using deep purples and blacks for a cohesive look */
+  background: linear-gradient(135deg, #1f1438 0%, #0a0719 100%);
+  border: 1px solid var(--gold-soft);
   border-radius: 16px;
   padding: 24px;
   width: 100%;
@@ -585,7 +587,7 @@ section {
 /* Navigation arrows for testimonials */
 .client-testimonials-arrow {
   /* Style arrows to match site palette */
-  background: var(--bg-soft);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--gold);
   width: 44px;
   height: 44px;
