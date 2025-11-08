@@ -226,7 +226,8 @@
       <>
         <FloatingWA message="Hi I would like to book a reading" />
         <Header />
-        <main className="wrapper">
+        {/* Apply fade-in animation to the page content */}
+        <main className="wrapper fade-in">
           {/* Hero Section */}
           <section className="hero">
             <div>
@@ -246,28 +247,6 @@
                 Sessions available online worldwide. Limited daily bookings for deeper, focused work.
               </div>
             </div>
-            <aside className="hero-card">
-              <div className="hero-card-label">Featured Offering</div>
-              <h3>Signature Clarity Session</h3>
-              <p>
-                A guided tarot and energy reading for those at a crossroads in love, career, or self.
-              </p>
-              <div className="hero-card-divider"></div>
-              <ul className="hero-card-list">
-                <li>Intuitive spread tailored to your questions</li>
-                <li>Insight on patterns, blocks and next steps</li>
-                <li>Offered as 60 or 120 minute sessions</li>
-              </ul>
-              <a
-                href="YOUR_60_MIN_GOOGLE_CALENDAR_LINK"
-                className="booking-cta-link"
-                style={{ marginTop: '4px', justifySelf: 'flex-start' }}
-                target="_blank"
-                rel="noopener"
-              >
-                Book now <span>↗</span>
-              </a>
-            </aside>
           </section>
 
           {/* About Preview */}
@@ -347,7 +326,7 @@
                 Take the first step toward understanding your path, healing your relationships, and discovering your true potential.
               </p>
             </div>
-            <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+            <div className="cta-buttons">
               <a href="YOUR_60_MIN_GOOGLE_CALENDAR_LINK" className="btn-primary" target="_blank" rel="noopener">Book Your Reading Today</a>
             </div>
           </section>
@@ -364,7 +343,8 @@
       <>
         <FloatingWA message="Hi I would like to learn more about your services" />
         <Header />
-        <main className="wrapper">
+        {/* Apply fade-in animation */}
+        <main className="wrapper fade-in">
           {/* Hero section for the about page */}
           <section className="about-hero">
             <h1>About Luv Kohli</h1>
@@ -440,7 +420,8 @@
       <>
         <FloatingWA message="Hi I have a question about your services" />
         <Header />
-        <main className="wrapper">
+        {/* Apply fade-in animation */}
+        <main className="wrapper fade-in">
           <section id="services-page">
           <div className="section-header">
             <h2 className="section-title">Services Offered</h2>
@@ -472,7 +453,8 @@
       <>
         <FloatingWA message="Hi I’ve booked a session with Luv and would like to confirm payment" />
         <Header />
-        <main className="wrapper">
+        {/* Apply fade-in animation */}
+        <main className="wrapper fade-in">
           <section id="booking">
             <div className="section-header">
               <h2 className="section-title">Book a Reading</h2>
@@ -572,7 +554,8 @@
       <>
         <FloatingWA message="Hi, I have a question about your services" />
         <Header />
-        <main className="wrapper">
+        {/* Apply fade-in animation */}
+        <main className="wrapper fade-in">
           <section id="contact">
             <div className="section-header">
               <h2 className="section-title">Contact</h2>
