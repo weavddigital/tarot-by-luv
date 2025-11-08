@@ -181,6 +181,18 @@ section {
   min-height: 80vh;
 }
 
+/* Centre the content within the hero section */
+.hero > div {
+  /* Limit the width of hero content for better readability */
+  max-width: 760px;
+  margin: 0 auto;
+  /* Use flex layout to centre items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 /* CTA buttons wrapper to centre align the call-to-action on the home page */
 .cta-buttons {
   display: flex;
