@@ -46,7 +46,8 @@ img {
   max-width: var(--max-width);
   margin: 0 auto;
 /* Reduced bottom padding to avoid large empty space on shorter pages */
-  padding: 0 20px 40px;
+  /* Reduce bottom padding further to minimize large empty space on shorter pages */
+  padding: 0 20px 20px;
 }
 
 header {
@@ -136,7 +137,8 @@ header {
 
 /* Section spacing (reduced bottom padding to mitigate large empty spaces) */
 section {
-  padding: 40px 0 30px;
+  /* Slightly reduce bottom padding on sections to remove excess whitespace */
+  padding: 40px 0 20px;
 }
 
 .section-header {
